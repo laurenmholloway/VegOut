@@ -47,13 +47,36 @@ $(function () {
 
 //START OF AJAX/JSON LESSON
     $.getJSON("recipes.json", function (data) {
+        //Grab the names of the recipes and list them in recipe list
         $.each(data.recipes, function (key, val) {
             var recipeName = val.name;
             $('ul:first').append('<li class="list-group-item">' + recipeName + '</li>');
-            
-        })
-        
+
+        });
+
+        //click on a recipe name, show the other details
+        $('.list-group-item').on('click', function () {
+            var recipeName = $(this).text();
+            $.each(data.recipes, function (key, val) {
+                if (recipeName == val.name) {
+                    //update heading
+                    $('#recipeName').replaceWith("<h1 id='recipeName'>" + recipeName + "</h1>");
+                    //update description
+                    var directions = val.directions;
+                    alert(directions);
+                    $('#directions').replaceWith("<p>" + directions + "</p>");
+                    //update ingredients
+                    //var ingredients = val.ingredients;
+                    //$.each(ingredients, function () {
+                    //    alert($(this));
+                    //});
+                }
+
+
+            });
+        });
     });
+
 
 
 
