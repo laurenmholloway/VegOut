@@ -107,6 +107,7 @@ input {
     padding-top: 55px;
     background-color: #F2F2F0;
     height: 615px;
+    overflow-y:scroll;
 }
 #recipesTitleBox {
     font-size: 18px;

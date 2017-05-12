@@ -46,18 +46,14 @@ $(function () {
 
 
 //START OF AJAX/JSON LESSON
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-
-            var jcontent = xmlhttp;
-            console.log(jcontent);
-
-        }
-    }
-    xmlhttp.open("POST", "recipes.json", true);
-    xmlhttp.setRequestHeader("Content-type", "application/json");
-    xmlhttp.send(null);
+    $.getJSON("recipes.json", function (data) {
+        $.each(data.recipes, function (key, val) {
+            var recipeName = val.name;
+            $('ul:first').append('<li class="list-group-item">' + recipeName + '</li>');
+            
+        })
+        
+    });
 
 
 
