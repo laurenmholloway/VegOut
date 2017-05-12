@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>VegOut | Veggie-Based Recipes</title>
+
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="Content/style.css" rel="stylesheet" />
+
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/myjQuery.js"></script>
+</head>
+<body>
+    <div class="topSec">
+        <div class="centerBlock">
+            <!--Branding Headings-->
+            <img src="images/carrot.png" />
+            <h1>VegOut</h1>
+            <h3>Need a quick veggie-based recipe for your next meal? <br />Enter the vegetable you like and find a recipe to match.</h3>
+
+            <!--Form input box with search buttons-->
+            <input id="veggieInput" type="text" placeholder="Enter Veggie Name" />
+            <p id="buttons"><a id="findButton" href="#" class="btn btn-primary" role="button">Find Recipes</a> <a href="#" class="btn btn-default" role="button" id="viewAllButton">View All</a></p>
+        </div>
+    </div>
+    <!--Breakup Section-->
+    <div id="recipesTitleBox"></div>
+    <!--Recipes List Section-->
+    <div class="row">
+        <div class="panel panel-default sidenav col-md-3">
+            <!-- Default panel contents -->
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item strong">DJ Spinach</li>
+                <li class="list-group-item">Bang! Bang! Broccoli</li>
+                <li class="list-group-item">Kale Queen</li>
+                <li class="list-group-item">Carrots! Oh, Carrots!</li>
+                <li class="list-group-item">Spinach Delight</li>
+                <li class="list-group-item">Cabbage Patch</li>
+                <li class="list-group-item">Carrot Top</li>
+                <li class="list-group-item">Sgt. Pepper's Peppers</li>
+                <li class="list-group-item">Pedro's Pedro's Peppers</li>
+                <li class="list-group-item">Kohlrabi Chaos</li>
+                <li class="list-group-item">Broccoli Bruiser</li>
+                <li class="list-group-item">Jicima Bobicima</li>
+                <li class="list-group-item">One Heck of a Jicima Salad</li>
+                <li class="list-group-item">Spam</li>
+                <li class="list-group-item">Artichokes & Accidents</li>
+                <li class="list-group-item" id="addItemForm">
+                    Oops! We couldn't find a recipe with your vegetable. <br />Would you like to add a recipe to our list?<br />
+                    <input id="recipeInput" class="inputs" type="text" placeholder="Enter Recipe Name" />
+                    <p id="buttons"><a id="addRecipeButton" href="#" class="btn btn-primary" role="button">Add Recipe</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Full Recipe Section-->
+        <div id="recipeSection" class="col-md-9">
+            <h1 id="recipeName">Recipe Name</h1>
+            <p>Cute tag line for the Recipe.</p>
+            <br />
+            <h2>Ingredients</h2>
+            <ul>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+            </ul>
+            <h2>Directions</h2>
+            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+        </div>
+    </div>
+</body>
+</html>
